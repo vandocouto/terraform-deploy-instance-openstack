@@ -1,6 +1,27 @@
 # terraform-deploy-instance-openstack
 
 
+
+- Instalando o curl
+
+* CentOS
+<pre>
+# yum install curl 
+</pre>
+* Ubuntu
+<pre>
+# apt-get install curl
+</pre>
+- Instalando o terraform
+<pre>
+# curl "https://releases.hashicorp.com/terraform/0.8.1/terraform_0.8.1_linux_amd64.zip" -o "/opt/terraform_0.8.1_linux_amd64.zip"
+# cd /opt
+# unzip terraform_0.7.13_linux_amd64.zip
+# ln -s /opt/terraform /usr/local/bin/
+# terraform --version
+Terraform v0.8.1
+</pre>
+
 - Ajustando os dados de acesso no OpenStack (Controller)
 <pre>
 $ vim deploy.sh
@@ -36,5 +57,8 @@ vim main.tf
 <pre>
 ./deploy.sh default destroy
 </pre>
+<hr>
 
+- Mais sobre o terraform, visite o link abaixo:
+* https://www.terraform.io/
 
